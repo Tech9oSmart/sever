@@ -1,118 +1,17 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Minecraft Zombie</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #222;
-    }
-
-    .zombie {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Head */
-    .head {
-      width: 50px;
-      height: 50px;
-      background-color: #3a8039; /* Green color for zombie's face */
-      position: relative;
-    }
-
-    .eye {
-      width: 10px;
-      height: 10px;
-      background-color: black;
-      position: absolute;
-      top: 15px;
-    }
-
-    .eye.left {
-      left: 10px;
-    }
-
-    .eye.right {
-      right: 10px;
-    }
-
-    /* Body */
-    .body {
-      width: 40px;
-      height: 60px;
-      background-color: #4a92d1; /* Blue shirt color */
-      margin-top: 5px;
-    }
-
-    /* Arms */
-    .arm {
-      width: 15px;
-      height: 50px;
-      background-color: #3a8039; /* Green arm color */
-      position: absolute;
-    }
-
-    .arm.left {
-      left: -20px;
-      top: 10px;
-    }
-
-    .arm.right {
-      right: -20px;
-      top: 10px;
-    }
-
-    /* Legs */
-    .legs {
-      display: flex;
-      justify-content: space-between;
-      width: 40px;
-      margin-top: 5px;
-    }
-
-    .leg {
-      width: 15px;
-      height: 40px;
-      background-color: #2d3d6c; /* Dark blue leg color */
-    }
-
-    /* Dance Animation */
-    @keyframes dance {
-      0%, 100% {
-        transform: rotate(-10deg);
-      }
-      50% {
-        transform: rotate(10deg);
-      }
-    }
-
-    .zombie {
-      animation: dance 0.5s infinite;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="zombie">
-    <div class="head">
-      <div class="eye left"></div>
-      <div class="eye right"></div>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="max-w-lg w-full bg-white shadow-lg rounded-lg p-4">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Video Player</h1>
+        <video class="w-full rounded-lg" controls>
+            <source src="Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-    <div class="body"></div>
-    <div class="arm left"></div>
-    <div class="arm right"></div>
-    <div class="legs">
-      <div class="leg"></div>
-      <div class="leg"></div>
-    </div>
-  </div>
 </body>
 </html>
